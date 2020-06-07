@@ -10,7 +10,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -44,7 +44,7 @@ public class Tab_Notes extends Fragment {
         final Button button_manager = (Button) myFragmentView.findViewById(R.id.noteOpen);
 
         // Get SharedPreferences - 'myPrefs'
-        myNotePrefs = this.getActivity().getSharedPreferences("myNotePrefs", Context.MODE_WORLD_READABLE);
+        myNotePrefs = this.getActivity().getSharedPreferences("myNotePrefs", Context.MODE_PRIVATE);
 
         String fileName = myNotePrefs.getString("fileName", "");
         final File dir = new File(Environment.getExternalStorageDirectory() + "/"

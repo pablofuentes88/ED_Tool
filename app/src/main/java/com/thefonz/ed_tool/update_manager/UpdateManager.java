@@ -14,7 +14,7 @@ import android.os.Environment;
 import com.thefonz.ed_tool.R;
 import com.thefonz.ed_tool.utils.Constants;
 import com.thefonz.ed_tool.utils.Helper;
-import org.apache.http.util.ByteArrayBuffer;
+//import org.apache.http.util.ByteArrayBuffer;
 
 import java.io.*;
 import java.net.URL;
@@ -93,7 +93,7 @@ public class UpdateManager extends Application {
         context.getApplicationContext().startActivity(myIntent);
     }
 
-    public static void downloadUpdate(final Context context) {
+    /*public static void downloadUpdate(final Context context) {
         // do update download here
         new Thread(new Runnable() {
             public void run() {
@@ -127,7 +127,7 @@ public class UpdateManager extends Application {
                 }
             }
         }).start();
-    }
+    }*/
 
     private static void installUpdate(final Context context){
         // Install new update

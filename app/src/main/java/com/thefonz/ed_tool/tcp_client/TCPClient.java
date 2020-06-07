@@ -17,6 +17,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 
 public class TCPClient extends Application {
+    private static final String TAG = "TCPClient";
 
     protected String serverMessage;
     private OnMessageReceived mMessageListener = null;
@@ -34,8 +35,9 @@ public class TCPClient extends Application {
     public void sendMessage(String key){
         // check to see if out is not null, and no errors found then send the key
         if (out != null && !out.checkError()) {
-            out.println(key);
-            out.flush();
+            //out.println(key);
+            //out.flush();
+            Log.d(TAG, "sendMessage: " + key);
         }
     }
 

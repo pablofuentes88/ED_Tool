@@ -7,7 +7,7 @@ package com.thefonz.ed_tool.update_manager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -48,8 +48,8 @@ public class Dialog_Updater extends FragmentActivity {
         downInstall.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Show user what we are doing, then call the downloadUpdate() method ...
-                showProgress(activity);
-                UpdateManager.downloadUpdate(activity);
+                //showProgress(activity);
+                //UpdateManager.downloadUpdate(activity);
             }
         });
 

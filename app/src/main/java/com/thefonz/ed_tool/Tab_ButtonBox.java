@@ -10,7 +10,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,7 +74,7 @@ public class Tab_ButtonBox extends Fragment {
         textViewBatLevel = (TextView ) myFragmentView.findViewById(R.id.batLevel);
 
         // Get SharedPreferences - 'myPrefs'
-        myPrefs = this.getActivity().getSharedPreferences("myPrefs", Context.MODE_WORLD_READABLE);
+        myPrefs = this.getActivity().getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
 
         buttonB_1 = (Button)myFragmentView.findViewById(R.id.buttonB_1); buttonB_1.setOnClickListener(onClickListener);
         buttonB_2 = (Button)myFragmentView.findViewById(R.id.buttonB_2); buttonB_2.setOnClickListener(onClickListener);

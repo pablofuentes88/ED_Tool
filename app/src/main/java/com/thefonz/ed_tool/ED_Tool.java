@@ -12,11 +12,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.thefonz.ed_tool.tcp_client.TCPClient;
@@ -63,13 +63,15 @@ public class ED_Tool extends FragmentActivity implements ActionBar.TabListener {
         boolean reddit = false;
 
         // Create The Tab List ArrayList depending on which features/tabs are enabled in preferences ..
-        ArrayList<Fragment> list = new ArrayList<Fragment>();
+        ArrayList<Fragment> list = new ArrayList<>();
 
         // Button Box tab will be non removable, so always add this Tab to the list
         list.add(new Tab_ButtonBox());
+        list.add(new Tab_Calculator());
+        calculator = true;
 
-        int maxPageLimit = 1;
-
+        int maxPageLimit = 2;
+/*
         // Make preferences checks and set following tabs accordingly
         if (raresOnOff) {
             rares = true;
@@ -96,7 +98,7 @@ public class ED_Tool extends FragmentActivity implements ActionBar.TabListener {
             list.add(new Tab_Reddit());
             maxPageLimit = maxPageLimit + 1;
         }
-
+*/
         // Set theme according to Preference setting
         ThemeManager.onActivityCreateSetTheme(this);
 
